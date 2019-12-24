@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/06-rivetcontur/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2019-08-13 16:29:41 +0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial">
+    <link rel="stylesheet" type="text/css" href="./Rivet+Contur – Hands On DM@LHC_files/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./Rivet+Contur – Hands On DM@LHC_files/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="./Rivet+Contur – Hands On DM@LHC_files/lesson.css">
+    <link rel="stylesheet" type="text/css" href="./Rivet+Contur – Hands On DM@LHC_files/syntax.css">
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-128.png" sizes="128x128">
+    <meta name="application-name" content="Software Carpentry - Hands On DM@LHC ">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="../assets/favicons/swc/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="../assets/favicons/swc/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="../assets/favicons/swc/mstile-310x310.png">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Rivet+Contur – Hands On DM@LHC 
+  </title>  
+
+  </head>
+  <body>
+
+    
+
+
+<div class="panel panel-default life-cycle">
+  <div id="life-cycle" class="panel-body beta">
+    This lesson is being piloted (Beta version)
+  </div>
+</div>
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org/" class="pull-left">
+        <img class="navbar-logo" src="./Rivet+Contur – Hands On DM@LHC_files/swc-icon-blue.svg" alt="Software Carpentry logo">
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/setup.html">Setup</a></li>
+
+        
+        <li class="dropdown">
+          <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/01-introduction/index.html">Introduction</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/02-dmbasics/index.html">Dark Matter Theory Basics</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/03-madgraphpythia/index.html">MadGraph+Pythia</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/04-searches/index.html">DM Searches : Mono-X</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/05-stats/index.html">LHC Statistics</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/06-rivetcontur/index.html">Rivet+Contur</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/07-contest/index.html">The Contest</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/reference.html">Reference</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/about/index.html">About</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/discuss/index.html">Discussion</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/figures/index.html">Figures</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/guide/index.html">Instructor Notes</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/LICENSE.html">License</a></li>
+	
+	<li><a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/edit/gh-pages/_episodes/06-rivetcontur.md" data-checker-ignore="">Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/05-stats/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/">Hands On DM@LHC </a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/07-contest/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Rivet+Contur</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 20 min
+      <br>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>What is Rivet? What is Contur?</p>
+</li>
+	
+	<li><p>What is an unfolded distribution?</p>
+</li>
+	
+	<li><p>What do existing measurements say about DM signatures?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Execute an existing Rivet analysis pertinent to our monojet signature.</p>
+</li>
+	
+	<li><p>Transform the analyzed spectra into exclusion limits on the DMsimp model using Contur.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<p>Now that we have a conceptual understanding of how we can go from a measurement to a meaningful
+physics statement by using the power of likelihoods, let’s contextualize this with the CONTUR tool.
+CONTUR (<a href="https://contur.hepforge.org/">https://contur.hepforge.org/</a>, <a href="https://arxiv.org/abs/1606.05296">1606.05296</a>) stands for <strong>C</strong>onstraints <strong>O</strong>n <strong>N</strong>ew <strong>T</strong>heories <strong>U</strong>sing <strong>R</strong>ivet
+and aims at making as broad use of the wealth of measurements from the LHC, and really any other collider
+experiment for that matter, by using the Rivet (<a href="https://rivet.hepforge.org/">https://rivet.hepforge.org/</a>)
+analysis preservation paradigm.  In its current incarnation, doing so requires that certain approximations
+are made which limit its power as compared to dedicated searches and it is further limited to only
+those final states that are available as preserved <a href="https://rivet.hepforge.org/analyses/">Rivet routines</a>.  However,
+as you will (hopefully) see, even with these limitation it can serve to be incredibly powerful in providing
+broad constraints and help guide us to know which regions of parameter space are <strong>not</strong> interesting.</p>
+
+<p>Doing this will require that we pass through two “broad” analysis stages, for which the executables
+of each are available within the Docker image :</p>
+<ul>
+  <li>Rivet Analysis : Implements selection and makes prediction of truth level spectra for our new BSM signal.</li>
+  <li>Contur Analysis : Performs statistical analysis of data and predicted BSMN signal.</li>
+</ul>
+
+<h2 id="unfolded-spectra">Unfolded Spectra</h2>
+
+<p>The first somewhat unique aspect of the Contur approach to reinterpretations is that unlike
+a conventional search at the LHC, Contur functions on “unfolded” spectra.  These are spectra
+that are created typically for the purposes of performing measurements of pure SM processes.
+A statistical procedure knows as unfolding (<a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/06-rivetcontur/1611.01927">https://arxiv.org/abs/1611.01927</a>) is performed which removes in
+an average way the effects of finite detector resolution.  In some sense, though some purists
+may cringe at this phrase, a “deconvolution” is performed.  The result of this is a spectra which
+itself is “at truth level” and representative of the differential cross section measured in
+that set of data for the process in question.  This can then be directly compared to a
+theorists prediction of the fiducial (i.e. in the limited phase space accessible by the experiment)
+cross section and this is typically done for an array of predictions.</p>
+
+<p><img src="./Rivet+Contur – Hands On DM@LHC_files/dijet_reco.png" alt="">
+<img src="./Rivet+Contur – Hands On DM@LHC_files/dijet_unfolded.png" alt=""></p>
+
+<p>Though the broad observation here, and the premise of working with such unfolded measurements
+is that we have already presumed that the data agree with the SM prediction for that process …
+but only to within the uncertainties that result from propagating all those experimental
+uncertainties through the unfolding procedure.  And it is within these uncertainties
+that we assume BSM physics to perhaps lie.  With this in mind, we will be assuming that
+<strong>the entire cross section in data is itself background</strong>!</p>
+
+<h2 id="truth-analysis">Truth Analysis</h2>
+
+<p>However, the great thing about working with unfolded spectra is that the effects of detector
+simulation <strong>need not be considered</strong>! Yes, you read that right folks, we are going to do a search
+for BSM physics at the LHC that is (to a degree) detector agnostic!  This is precisely due to
+the fact that we have unfolded the spectra and that they are representative of a fiducial cross
+section.  So if we want to compare a prediction to this observation, for example when making a
+prediction for the amount of signal in a DM model that could be hiding within the uncertainties
+previously discussed, we only need to perform the analysis at the “truth level” in which the
+particles under question are stable hadrons.</p>
+
+<p><img src="./Rivet+Contur – Hands On DM@LHC_files/hadrons.png" alt=""></p>
+
+<p>This is precisely what <a href="https://rivet.hepforge.org/">Rivet</a> does, and does well.  We will not go into the precise details
+of how to design and implement a Rivet analysis, but the main point is that the methods in the
+interface of Rivet only allow for “safe” reconstruction procedures.  For example, in Rivet, you
+do not have access and the ability to readily use partons within the reconstruction of jets;
+you only can construct hadron jets.  The reasoning here is that although a jet was “like a parton”
+partons are not the things that enter our detector, but rather hadrons are.  So when we unfold
+a measurement, we are only removing the effects of the resolution introduced by the detector,
+resulting in a measurement that should only be compared to a prediction of the behavior of a set of
+hadrons.  And working from the other direction means producing a theoretical prediction “at hadron
+level”.  This is precisely what Pythia does for us as an event generator.</p>
+
+<h2 id="running-rivet">Running Rivet</h2>
+
+<p>Rivet takes as input the <code class="highlighter-rouge">HEPMC</code> file that you produced earlier, which contains the stable
+hadron information.  This is contained within the <code class="highlighter-rouge">Events/run_XY</code> directory and you may
+need to <code class="highlighter-rouge">gunzip</code> it if you haven’t already :</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>Events/run_01
+gunzip tag_1_pythia8_events.hepmc.gz
+</code></pre></div></div>
+
+<p>Next, go back to your main working <code class="highlighter-rouge">/contur</code> directory, above where MadGraph lies and run
+the Rivet analysis routine for the ATLAS “unfolded monojet” measurement (<a href="https://rivet.hepforge.org/analyses/ATLAS_2017_I1609448.html">ATLAS_2017_I1609448</a>).</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rivet <span class="nt">-a</span> ATLAS_2017_I1609448 <span class="nt">-o</span> MyFirstRivetAnalysis.yoda MG5_aMC_v2_6_6/PROC_DMsimp_s_spin1_0/Events/run_01/tag_1_pythia8_events.hepmc
+</code></pre></div></div>
+
+<p>from which you should see a bunch of output that indicates you are performing the analysis</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Event 100 (0:00:02 elapsed)
+Event 200 (0:00:04 elapsed)
+Event 300 (0:00:06 elapsed)
+Event 400 (0:00:07 elapsed)
+Event 500 (0:00:09 elapsed)
+Event 600 (0:00:10 elapsed)
+Event 700 (0:00:12 elapsed)
+Event 800 (0:00:14 elapsed)
+Event 900 (0:00:16 elapsed)
+Event 1000 (0:00:18 elapsed)
+Rivet.Analysis.Handler: INFO  Dumping intermediate results to RUN1.yoda.
+Rivet.Analysis.Handler: INFO  Finalising analyses
+Rivet.Analysis.Handler: INFO  Skipping finalize in periodic dump of ATLAS_2017_I1609448 as it is not declared reentrant.
+</code></pre></div></div>
+
+<p>This will produce what is called a “yoda file” - <code class="highlighter-rouge">MyFirstRivetAnalysis.yoda</code> - which contains the analyzed information
+and functions essentially like a lightweight ROOT file.  If you are interested about why the Rivet authors chose to
+<em>not</em> use ROOT, read the users manual, there is a section devoted to the history of this choice.</p>
+
+<p>Let’s start by inspecting this file by plotting the outcome of the analysis.  To do this, run the <code class="highlighter-rouge">rivet-mkhtml</code> command</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rivet-mkhtml <span class="nt">-o</span> MyRivetPlots MyFirstRivetAnalysis.yoda
+</code></pre></div></div>
+
+<p>which will produce a directory called <code class="highlighter-rouge">MyRivetPlots</code>.  To be able to see the contents of this directory, which are
+nicely formatted in an HTML page, move the directory itself to the <code class="highlighter-rouge">local</code> directory in the image which will
+make it accessible in the “outside world” on your laptop.  Then navigate to it and open the <code class="highlighter-rouge">index.html</code> in whatever
+way you do on your machine (on Mac OSX, you should be able to execute <code class="highlighter-rouge">open index.html</code>).  This will open a webpage
+locally and you can explore its contents.  You should find only a few plots and they should be precisely the same
+plots as those accompanying the published result for the unfolded spectra - <a href="https://arxiv.org/abs/1707.03263">1707.03263</a>.</p>
+
+<p><img src="./Rivet+Contur – Hands On DM@LHC_files/rivet_plots_example.png" alt=""></p>
+
+<p>The point here is that when designing an analysis, many investigations may have been done and come along with your
+analysis.  However, in a Rivet analysis, only those spectra that have been unfolded to truth level are saved for inspection.
+In this case, if you are using the default parameters in the model, particularly with a mediator mass of 1 TeV and the vector
+coupling turned on, then you will notice that in general the prediction does not agree with the observed data.  That is because,
+of course, the prediction is for a BSM process, and the data have been measured and shown to agree within the uncertainties
+quoted on the datapoints.</p>
+
+<blockquote class="challenge">
+  <h2 id="all-the-lines">All The Lines!!!</h2>
+
+  <p>On these plots, you will notice (despite the lack of a clear and descriptive legend for everything), that there are data point
+which are the data for the unfolded spectra and then an ensemble of predictions from the input yoda file.  These predictions
+are individual predictions for all of the variations like PDF sets used and the renormalization and factorization scale chosen.
+They are theory uncertainties and are controlled via the <code class="highlighter-rouge">run_card.dat</code> we discussed earlier.</p>
+
+  <p>Try to change the <code class="highlighter-rouge">run_card.dat</code> file to turn them off and perform a new run.  Did you notice if anything was faster? What do
+you see when you generate your Rivet HTML page?  (Hint : There should only be one theory curve.)</p>
+
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="toggling-the-mediator-mass">Toggling the Mediator Mass</h2>
+
+  <p>To get some more practice with Rivet and MadGraph+Pythia, take a few minutes (it will take a while depending on the speed of
+your machine), to generate Rivet plots for the following parameter setting changes.</p>
+
+  <ul>
+    <li>_Default__ : The mediator mass (<code class="highlighter-rouge">MY1</code>) is 1.0 TeV by default.  The dark matter mass (<code class="highlighter-rouge">MXd</code>) is set to 10 GeV.  The vector coupling (<code class="highlighter-rouge">gVXd</code>) is set to 1.0 and the axial-vector coupling (<code class="highlighter-rouge">gAXd</code>) is set to 0.0; it is a vector mediator.</li>
+    <li>Change the mediator mass to 1.5 TeV.</li>
+    <li>Change the mediator mass to 3.0 TeV and examine the same features.</li>
+    <li>With the mediator mass set <em>back to</em> 1.0 TeV, change the model to be that of an <strong>axial-vector</strong> mediator as opposed to a vector mediator.</li>
+  </ul>
+
+  <p>With each change, after generting the Rivet plots, as yourself : How does the cross section change as compared to the default values?  Did the shape of the predicted spectra change?</p>
+
+  <p>NOTE : The <code class="highlighter-rouge">rivet-mkhtml</code> executable can take as input multiple Rivet yoda files.  This make make your life in comparing things easier.  Explore this too.</p>
+
+</blockquote>
+
+<h2 id="running-contur">Running Contur</h2>
+
+<p>Ok, that was cool.  We made some spectra and we looked at them.  Perhaps you noticed that for certain parameter choices,
+the predicted signal spectra was considerably different than the data, much more so than the size of the uncertianties
+on the data itself.  In this case, it may be “obvious” that this parameter point is not viable.  However, in other cases it is
+not as clear cut and we would like to be able to apply the statistical machinery described previously to this problem.  That ius
+precisely what we can do with Contur.  From Contur, we will be able to produce, for a specific set of parameters, what the CL(s)
+exclusion is for that point and specific signal strength of mu=1.  Well, actually 1-CL(s), but this is being pedantic and to appreciate the details of what we mean here, you
+are referred to read <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/06-rivetcontur/open-2000-205">open-2000-205</a>.  But there are a few important assumptions and simplifications that
+happen under the hood of which you should be cognisant :</p>
+
+<ul>
+  <li><strong>[1] Data=Background</strong> : Because the “search” reinterpretation is being performed on an unfolded spectra coming from a
+measurement, by construction we have already concluded that there isn’t any observable signal.  To this end, Contur
+assumes that the unfolded spectrum of data <strong>is</strong> entirely background.  That is the background prediction.</li>
+  <li><strong>[2] One Uncertainty</strong> : In a normal search, and measurement for that sake, there are a large ensemble of systematic
+uncertainties.  However, to keep life simple, all of these are boiled down into a single uncertainty on the yield
+of the number of events in a given bin.  This is what you saw plotted as error bars on the data before.</li>
+  <li><strong>[3] Biggest Deviation</strong> : This is perhaps the biggest assumption and what somehow makes Contur exclusions conservative
+but palatable (in Sam’s opinion).  In a normal full “profile likelihood with CLs” statistical machinery, the full power
+of the data is exploited by forming the likelihood as a product over exclusive signal regions, often called “bins”.  However,
+in Contur, a simplified approach is taken by treating each bin as an entirely separate measurement, from which the entire
+statistical machinery is run.  Then, only the bin with the largest deviation (i.e. smallest CL(s) value) is taken as
+representative of the CL(s) value for the interpretation.  In this way, Contur limits will always be less powerful than
+their full blown counterparts.  Modifying this to make the limits more “complete” is a topic of ongoing developement and if you
+want to help, then feel free to reach out to Jon Butterworth of David Yallup. I’m sure they would welcome more developers.</li>
+</ul>
+
+<p>With these simplifying assumptions in mind and armed with an appreciation of “what we are looking for in terms of statistics”
+(e.g. a CL = 1-CL(s) &lt; 0.95 means excluded at 2 sigma), let’s run Contur.  Start by choosing one of the yoda files that you
+produced from the previous four runs in the above “Challenge” (yeah, you actually had to do that, so if you haven’t then go
+back and do it now).  For here, we will use the first run with the output file <code class="highlighter-rouge">MyFirstRivetAnalysis.yoda</code>.  This Rivet-formatted
+file serves at the input to the generation of toys, and calculation of the CL(s) value for the parameters of that run
+when executing :</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>contur <span class="nt">-f</span> MyFirstRivetAnalysis.yoda <span class="nt">-o</span> MyFirstRivetAnalysis-contur
+</code></pre></div></div>
+
+<p>this will print some debug information for the toy experiments and calculation of the CL values
+and eventually produce some output like</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WARNING - Negative CLs -0.943237, setting to zero. BSM+SM is in better agreement with data.
+WARNING - Negative CLs -1.072024, setting to zero. BSM+SM is in better agreement with data.
+WARNING - Negative CLs -0.012004, setting to zero. BSM+SM is in better agreement with data.
+100%|##########| 1168/1168 [00:03&lt;00:00, 295.03it/s]
+Added yodafile with reported exclusion of: 1.0
+Run Information
+Contur is running in /contur on analysis objects in ['MyFirstRivetAnalysis.yoda']
+Excluding Higgs to WW measurements
+Building all available data correlations, combining bins where possible
+Building default background model from data, ignoring optional theory predictions (excluding ratios)
+
+Parameter values not known for this run.
+Combined exclusion for these plots is 100.00 %
+
+Writing output map to : ANALYSIS/contur.map
+</code></pre></div></div>
+
+<p>from which you can see that the exclusion for this particular parameter choices
+(Reminder : The default values were mMed=1 TeV, mDM=10 GeV, and the coupling was a vector coupling with a value of 1.0.).
+So the CL(s) value is effectively zero, meaning that this point in parameter space has been ruled out
+to a very high degree of confidence.</p>
+
+<p>From here, you can generate the debug plots for this run by executing</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>contur-mkhtml <span class="nt">-d</span> MyFirstRivetAnalysis-contur-plots MyFirstRivetAnalysis.yoda
+</code></pre></div></div>
+
+<p>which will produce a directory called <code class="highlighter-rouge">MyFirstRivetAnalysis-contur-plots</code> which is similar
+in format to the previous Rivet directory you produced.  Move this to the <code class="highlighter-rouge">/contur/local</code> directory
+to gain access on your local machine and inspect it.  You can now see not only the data as compared
+to your signal, but also the published pure SM prediction.  And, unlike in the case of the Rivet plots
+only the nominal signal, the one that is being probed and constrained, is shown.  By examining this
+in comparison to the output CL exclusion level, do things vibe?  Do they make sense</p>
+
+<p><img src="./Rivet+Contur – Hands On DM@LHC_files/run_1000_vector.png" alt=""></p>
+
+<blockquote class="challenge">
+  <h2 id="probe-the-space">Probe the Space</h2>
+
+  <p>Previously, you produced a few additional runs which scanned the mediator mass in the vector
+model and also compared the vector and axial-vector couplings of this model.  Each of these is
+a unique point in parameter space for this model and we can begin mapping out the constraints
+provided by this MET+jets analysis.</p>
+
+  <p>Do this by running contur and making the output plots for each scan point.  What do you observe?
+Are the results somehow consistent with what was observed in the published result? How do they differ?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span></h2>
+
+    <p style="display: none;"><strong>Default</strong> : mV=1 TeV, mDM=10 GeV, Vector3</p>
+    <div class="highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code>100%|##########| 1168/1168 [00:03&lt;00:00, 293.87it/s]
+Added yodafile with reported exclusion of: 1.0
+Run Information
+Contur is running in /contur on analysis objects in ['run1_1000_vector.yoda']
+Excluding Higgs to WW measurements
+Building all available data correlations, combining bins where possible
+Building default background model from data, ignoring optional theory predictions (excluding ratios)
+
+Parameter values not known for this run.
+Combined exclusion for these plots is 100.00 %
+
+Writing output map to : ANALYSIS/contur.map
+</code></pre></div>    </div>
+    <p style="display: none;"><img src="./Rivet+Contur – Hands On DM@LHC_files/run_1000_vector.png" alt=""></p>
+
+    <p style="display: none;"><strong>Intermediate mV</strong> : mV=1.5 TeV, mDM=10 GeV, Vector</p>
+    <div class="highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code>100%|##########| 1168/1168 [00:04&lt;00:00, 267.89it/s]
+Added yodafile with reported exclusion of: 1.0
+Run Information
+Contur is running in /contur on analysis objects in ['run1_1500_vector.yoda']
+Excluding Higgs to WW measurements
+Building all available data correlations, combining bins where possible
+Building default background model from data, ignoring optional theory predictions (excluding ratios)
+
+Parameter values not known for this run.
+Combined exclusion for these plots is 100.00 %
+
+Writing output map to : ANALYSIS/contur.map
+</code></pre></div>    </div>
+    <p style="display: none;"><img src="./Rivet+Contur – Hands On DM@LHC_files/run_1500_vector.png" alt=""></p>
+
+    <p style="display: none;"><strong>Large mV</strong> : mV=3.0 TeV, mDM=10 GeV, Vector</p>
+    <div class="highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code>100%|##########| 1168/1168 [00:07&lt;00:00, 165.90it/s]
+Added yodafile with reported exclusion of: 0.901622440643
+Run Information
+Contur is running in /contur on analysis objects in ['run1_3000_vector.yoda']
+Excluding Higgs to WW measurements
+Building all available data correlations, combining bins where possible
+Building default background model from data, ignoring optional theory predictions (excluding ratios)
+
+Parameter values not known for this run.
+Combined exclusion for these plots is 90.16 %
+
+Writing output map to : ANALYSIS/contur.map
+</code></pre></div>    </div>
+    <p style="display: none;"><img src="./Rivet+Contur – Hands On DM@LHC_files/run_3000_vector.png" alt=""></p>
+
+    <p style="display: none;"><strong>Large mV and Axial-vector</strong> : mV=3.0 TeV, mDM=10 GeV, Axial-Vector</p>
+    <div class="highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code>100%|##########| 1168/1168 [00:05&lt;00:00, 228.23it/s]
+Added yodafile with reported exclusion of: 0.820975116911
+Run Information
+Contur is running in /contur on analysis objects in ['run1_3000_axialvector.yoda']
+Excluding Higgs to WW measurements
+Building all available data correlations, combining bins where possible
+Building default background model from data, ignoring optional theory predictions (excluding ratios)
+
+Parameter values not known for this run.
+Combined exclusion for these plots is 82.10 %
+
+Writing output map to : ANALYSIS/contur.map
+</code></pre></div>    </div>
+    <p style="display: none;"><img src="./Rivet+Contur – Hands On DM@LHC_files/run_3000_axialvector.png" alt=""></p>
+
+  </blockquote>
+</blockquote>
+
+<h2 id="plug-and-chug">Plug and Chug</h2>
+
+<p>And there you have it, you now have at your disposal the tools by which to reinterpret the ATLAS
+unfolded monojet search! We have only done it for a small set of points, but the rest is “just busywork”.
+As in the statistics section on “contouring”, you now need to go forth and write scripts (or use
+some of the baked-in-yet-not-super-well-documented functionality in Contur) to map out the parameter
+space of interest and find the set of points that are excluded or which you fail to exclude.</p>
+
+<p>Then, draw your contour.</p>
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Rivet is a platform by which we can ‘safely’ analyze particle physics truth record data.</p>
+</li>
+    
+    <li><p>An unfolded spectra is one for which the effects of detector resolution have been removed through a deconvolution.</p>
+</li>
+    
+    <li><p>We can infer things about parameters in a model by using the CLs test statistic.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/05-stats/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/07-contest/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 copyright" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2019
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://software-carpentry.org/">Software Carpentry Foundation</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+	
+	<a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/edit/gh-pages/_episodes/06-rivetcontur.md" data-checker-ignore="">Edit on GitHub</a>
+	
+	/
+	<a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/blob/gh-pages/CONTRIBUTING.md" data-checker-ignore="">Contributing</a>
+	/
+	<a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/">Source</a>
+	/
+	<a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/blob/gh-pages/CITATION" data-checker-ignore="">Cite</a>
+	/
+	<a href="mailto:smeehan12@gmail.com">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script async="" src="./Rivet+Contur – Hands On DM@LHC_files/analytics.js"></script><script src="./Rivet+Contur – Hands On DM@LHC_files/jquery.min.js"></script>
+<script src="./Rivet+Contur – Hands On DM@LHC_files/bootstrap.min.js"></script>
+<script src="./Rivet+Contur – Hands On DM@LHC_files/lesson.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37305346-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+
+</body></html>

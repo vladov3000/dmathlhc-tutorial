@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/04-searches/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2019-08-13 16:29:41 +0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial">
+    <link rel="stylesheet" type="text/css" href="./DM Searches _ Mono-X – Hands On DM@LHC_files/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./DM Searches _ Mono-X – Hands On DM@LHC_files/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="./DM Searches _ Mono-X – Hands On DM@LHC_files/lesson.css">
+    <link rel="stylesheet" type="text/css" href="./DM Searches _ Mono-X – Hands On DM@LHC_files/syntax.css">
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/assets/favicons/swc/favicon-128.png" sizes="128x128">
+    <meta name="application-name" content="Software Carpentry - Hands On DM@LHC ">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="../assets/favicons/swc/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="../assets/favicons/swc/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="../assets/favicons/swc/mstile-310x310.png">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  DM Searches : Mono-X – Hands On DM@LHC 
+  </title>  
+
+  </head>
+  <body>
+
+    
+
+
+<div class="panel panel-default life-cycle">
+  <div id="life-cycle" class="panel-body beta">
+    This lesson is being piloted (Beta version)
+  </div>
+</div>
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org/" class="pull-left">
+        <img class="navbar-logo" src="./DM Searches _ Mono-X – Hands On DM@LHC_files/swc-icon-blue.svg" alt="Software Carpentry logo">
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/setup.html">Setup</a></li>
+
+        
+        <li class="dropdown">
+          <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/01-introduction/index.html">Introduction</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/02-dmbasics/index.html">Dark Matter Theory Basics</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/03-madgraphpythia/index.html">MadGraph+Pythia</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/04-searches/index.html">DM Searches : Mono-X</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/05-stats/index.html">LHC Statistics</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/06-rivetcontur/index.html">Rivet+Contur</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/07-contest/index.html">The Contest</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/reference.html">Reference</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/about/index.html">About</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/discuss/index.html">Discussion</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/figures/index.html">Figures</a></li>
+            
+            <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/guide/index.html">Instructor Notes</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/LICENSE.html">License</a></li>
+	
+	<li><a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/edit/gh-pages/_episodes/04-searches.md" data-checker-ignore="">Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/03-madgraphpythia/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/">Hands On DM@LHC </a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/05-stats/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">DM Searches : Mono-X</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 20 min
+      <br>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>How do you search for something you can’t detect?</p>
+</li>
+	
+	<li><p>What are ‘physics objects’ at the LHC?</p>
+</li>
+	
+	<li><p>What are the basic aspects of a search at the LHC?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Review the basic conceptual aspects of searches at the LHC.</p>
+</li>
+	
+	<li><p>Appreciate the basic components of a ‘physics signature’.</p>
+</li>
+	
+	<li><p>Understand the basics of inferential statistics and the CLs test statistic.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<h2 id="observing-dark-matter">Observing Dark Matter</h2>
+
+<p>When considering dark matter (DM) in the context of the LHC, it is important to acknowledge that
+we <strong>do not know</strong> if it is a fundamental particle.  However, if we assume it to be
+then it is possible to imagine a theory with a set of symmetries, which give rise to a particular Lagrangian
+in which there is an interaction between Standard Model (SM) particles and DM.  This theory
+can be either an effective field theory (left) or a complete theory (right), but in both cases
+what we are focusing on at the LHC is that we can collide SM particles, and what comes out
+is DM particles.</p>
+
+<p><img src="./DM Searches _ Mono-X – Hands On DM@LHC_files/eft.png" alt="">
+<img src="./DM Searches _ Mono-X – Hands On DM@LHC_files/zprime.png" alt=""></p>
+
+<p>The tricky part here, is that we already know that DM particles (assuming they are particles)
+interact very weakly with ordinary matter, or we would have already seen them.  As such,
+the DM particles that are produced if such an interaction occurs, will pass through an LHC
+detector unimpeded by the tracking detectors, the calorimeters, or the muon systems. For all
+intents and purposes, they are “invisible”.  From an experimental point of view, this poses
+two issues, which are related.</p>
+
+<p><strong>[1] Trigger</strong> : If there is nothing that interacts in your detector, then there is no way that the hardware
+and software can know to issue a <strong>trigger</strong> signal and subsequently read out the data.  You
+don’t record anything!</p>
+
+<p><strong>[2] Reconstruction</strong> : If the particle that you want to study does not interact with the
+detector that is supposed to “see” it, then you cannot reconstruct and (directly) observe
+its properties, as opposed to an electron which leaves a very unique signal in the tracker
+and calorimeter systems.</p>
+
+<p>To circumvent these issues, what most searches for DM rely on is the presence of an “associated”
+particle that is produced in addition to the DM.  This particle may be coming from
+and initial state radiation of a gluon (left) or something more complex, like a Higgs boson
+or a top quark that is produced “internally” in the diagram (center, right).  When these
+particles (or more accurately their decay products) enter the detector, they leave a distinct
+“signature” in the ensemble of detector subsystems.  This signature allows us to make a positive
+decision to trigger on an event and record the data for offline analysis.</p>
+
+<p><img src="./DM Searches _ Mono-X – Hands On DM@LHC_files/zprime.png" alt="">
+<img src="./DM Searches _ Mono-X – Hands On DM@LHC_files/monoh.png" alt=""></p>
+
+<p>However, we are still left with problem [2], we cannot examine the properties of the DM particles
+produced because they are invisible.  For this, we can rely on basic conservation of momentum
+to <strong>infer</strong> the presence of DM because the partons that are incoming to the collision themselves
+approximately have a combined momentum in the plane <strong>transverse</strong> to the beamline (z-axis)
+of zero.  And, since the detectors that we reconstruct are “hermetic”, meaning that they span
+nearly the full 4-pi solid angle surrounding the interaction point, we can observe all of the
+outgoing particles … so long as they are visible.  Now, if all of the particles produced in
+an event are visible, then the final net momentum in the transverse plane of these particles should be the same
+as the initial net momentum in the transverse plane of the incoming two partons, and therefore
+zero.  But if some of the particles in the event are invisible, then adding the observed momenta
+of only the visible particles will not necessarily sum to zero and we will observe a net <strong>imbalance</strong>
+in the final transverse momentum in the event.  It is this net imbalance in momentum, called <strong>“missing transverse momentum”</strong>,
+which allows us to infer that something invisible was produced, and which may be dark matter.</p>
+
+<blockquote class="callout">
+  <h2 id="a-pedantic-but-important-rant">A Pedantic (but important) Rant</h2>
+  <p>This is <em>not</em> called “missing energy”, and don’t let someone convince you it is called that
+and don’t start calling it that yourself.  Energy is a scalar quantity, momentum is a vector.
+And since we care about an <strong>imbalance</strong>, we have to care about the directionality in the sum.
+Therefore, this observable quantity should always be called the <strong>MISSING TRANSVERSE MOMENTUM</strong>!</p>
+
+</blockquote>
+
+<h2 id="the-ingredients-of-a-search">The Ingredients of a Search</h2>
+
+<p>Most of the searches that occur at the LHC can be characterized as “signature based searches” meaning that
+the selection criteria which defines the set of events under study, and therefore the “fiducial phase space”
+for which you are measuring the event rate, are based on a conceptual understanding of the unique topology.
+For dark matter searches, one of these criteria is that we are interested in those events with a large
+momentum imbalance and can additionally study the presence of other final state particles that may give hints
+as to interesting features of the DM-SM interaction.  After defining this phase space, we must estimate the
+background (i.e. contribution from “uninteresting” SM processes) as well as quantifying the uncertainties on this
+estimate as well as the estimate of the purported signal.  Finally, our understanding of the observed physics
+is tied to the parameters of the new physics via a statistical tool called the likelihood.</p>
+
+<p>Fully understanding the details of each of these parts is out of the scope of this tutorial,
+but we highlight here some of the more salient points.</p>
+
+<h2 id="identifying-the-signature">Identifying the Signature</h2>
+
+<p>Identifying a signature can start at 0th order from a simple examination of the Feynman diagrams that our BSM
+physics signal can produce.  If we take the example of producing the Z’ diagram above, then the signature
+of our signal is (1) a single gluon [emitted as ISR] and (2) large momentum imbalance [because of the
+invisible DM particles]. So we want to <strong>“select”“</strong> events with these two things.  The next step is to consider the types of processes that occur in the SM and
+how they differ from the features in our BSM physics.  In this case, there are two and only two things which our
+desired sets of events have {a gluon, high momentum imbalance}.  There should not be photons and there should
+not be electrons/muons/taus.  And this highlights the second aspect of a signature, a <strong>“veto”</strong>, whereby we
+reject events which contain these types of particles.</p>
+
+<p>So, the goal when defining a signature is to find the minimal set of features that you need to positively identify
+an event as probably coming from your diagram of interest as well as the set of features that it definitely
+<em>doesn’t</em> have, which can be used to reject “boring” SM events.</p>
+
+<h2 id="from-particles-to-physics-objects">From Particles to Physics Objects</h2>
+
+<p>Now, the diagrams we are studying when we are at <strong>parton level</strong> meaning that they are
+not actually representative of the observable and reconstructed signals in the event, and for this we must rather
+understand the concept of a “physics object” which relates a short distance degree of freedom (a particle)
+to an experimental observable in the set of detector subsystems.  Once this abstraction is made,
+the terms are often used interchangeably.</p>
+
+<p><img src="./DM Searches _ Mono-X – Hands On DM@LHC_files/objects.jpeg" alt=""></p>
+
+<h3 id="leptons-electrons-and-muons">Leptons (electrons and muons)</h3>
+
+<p>When an experimental physicist says “leptons” in the context of the LHC, they are often referring only
+to charged leptons, which are easy to identify.  This is because neutrinos, like DM, are weakly interacting
+and more often than not will pass through the detector unimpeded.  Moreover, they will often only refer to
+the first two generations (electrons and muons) because these are very cleanly reconstructed signals, as compared to
+tau leptons.</p>
+
+<p><strong>Electrons</strong> : Electrons are charged particles, so they will leave a track in the inner tracking detector (ID).
+Moreover, they will produce an energetic shower in the electromagnetic calorimeter with little energy
+appearing in the hadronic calorimeter behind.  Therefore, an electron can be identified by finding a track in
+the ID which points to a shower in the ECal.</p>
+
+<p><strong>Muons</strong> : A muon is a charged particle as well, so like an electron it will leave a a track in the ID.  However,
+for the energies that muons typically have at the LHC it is a minimum ionizing particle and therefore deposits
+a minimal amount of energy in the calorimeter systems and will pass through largely unimpeded.  Therefore, outside
+the calorimeters, another set of larger “tracking detectors” (the MS=muon spectrometer) is placed to detect the
+passing of the muon.  Because nearly all other particles are stopped by the calorimeters, by finding a positive match
+between an ID track and an MS track, we can reconstruct a muon.</p>
+
+<h3 id="photons">Photons</h3>
+
+<p>A photon interacts electromagnetically, like an electron, and so it will show up in the ECal as an energetic shower.
+However, because it is neutral, it will not leave a trace in the ID.  Therefore, a photon can be identified as a
+collimated cluster of energy in the ECal to which no ID track is associated.  A challenging aspect of photon identification
+is to distinguish photons from pi-0 hadrons which almost always decay to a pair of photons.  However, because the
+pi-0 has such a small mass, these two photons are often highly collimated and almost appear as a single cluster in the ECal.</p>
+
+<h3 id="jets">Jets</h3>
+
+<p>To 0th order, “a jet is a quark or a gluon”. This will get you a long way at the LHC.  However, they are more complicated
+when you move to 1st order in that a quark/gluon undergoes a parton shower and subsequent hadronization process which
+spawns dozens of outgoing hadrons, both charged and neutral, which all flow in roughly the same direction.  Therefore
+there is a blurry line between what we mean when we say “a quark”, but experimentally it is very well defined.  The
+neutral hadrons will show up as energetic showers (“clusters”) in the ECal and HCal, and the charged hadrons will show up
+both as tracks in the ID as well as clusters in the calorimeters.  Each of these individual clusters or tracks can be treated
+as an independent pseudo-particle and they can be grouped using any of of a number of “nearest-neighbor”-esque algorithms,
+the most popular at the LHC being the <a href="http://arxiv.org/abs/0802.1189">anti-kT algorithm</a> into exclusive sets of particles.  We then make the qualitative
+association that one of these groups of particles “probably” came from a quark/gluon that was emitted from the matrix
+element.</p>
+
+<h3 id="tau-leptons">Tau Leptons</h3>
+
+<p>We now get back to our third generation of charged leptons! We reserved these until <em>after</em> we covered jets because
+to a large degree these <em>are</em> jets, but just of a very specific topology.  First off, because the tau lepton is so heavy
+it is unstable and will eventually decay via the weak interaction.  This decay will subsequently be either to light leptons
+or hadrons depending on the decay of the intermediate virtual W boson.  This means that it is really hard to pick out
+tau leptons from electrons or muons and a considerable amount of effort is put towards this.  Luckily, most of the time (~65%)
+the W decays hadronically and produces either one or three hadrons which are collimated around the direction of flight of
+the tau.  Therefore, since there is a collimated flow of hadrons, a tau looks a lot like a jet!  And in fact it is!
+However, it is a special jet where the hadrons are distributed with a more predictable pattern around the direction of the
+jet which can be used to distinguish a quark/gluon jet from a “tau jet” … which we usually just call a tau.</p>
+
+<h3 id="missing-transverse-momentum-met">Missing Transverse Momentum (“MET””)</h3>
+
+<p>We already covered this.  However, to reconstruct invisible particles, like DM <strong>or neutrinos</strong>, we calculate the
+negative (in the opposite direction) of the vector sum of all of the visible reconstructed physics objects in a given
+event (which are the things we just learned about).  Beyond this, there is typically a component of the MET which comes
+from energy deposition (“flow”) of particles that weren’t quite “special enough” to make it into the reconstruction of
+a jet, or an electron, or any of the other things.  These are often low energy hadrons and constitute what is called
+the “soft term”.</p>
+
+<p>At this point, we should acknowledge the immense hypocrisy that is going on here.  Though we all appreciate now that
+the observable is constructed as a vector, we typically casually refer to it as “MET”, where the E stands for energy.  Ewwwww!</p>
+
+<h2 id="triggering">Triggering</h2>
+
+<p>The first experimental selection of any analysis at an LHC experiment is the trigger.  A trigger is a “fast decision”
+that is used in the experiment to decide whether to use precious data-flow bandwidth to record the information
+observed in the detector subsystems.  For instance, a very common trigger used by dark matter searches is the MET trigger
+in which events are only recorded if they have a “high level of MET at trigger level”.  What is important to recognize
+is that to make a <em>fast</em> decision often means that it is necessary to compromise the precision of the decision by
+not using the full information available in the detector.</p>
+
+<p>To do this effectively, trigger decisions are taken in multiple stages where the first
+stage (Level-1 : “L1”) is composed of logic implemented in field programmable gate array (FPGA) chips and mimic as
+closely as possible what will eventually be the offline criteria used in your eventual “signature”.  In the case of
+MET, this means that we don’t have time to reconstruct each physics object but will simply sum up the energy depositions
+of energy in the calorimeter assuming that they all came from single particles originating from (x,y,z)=(0,0,0).  In the
+case of MET, if the imbalance that we observe has a magnitude of MET that is greater than 50 GeV, then the event gets
+passed to the next stage, otherwise we allow the data to get overwritten.  This
+next stage (High Level Trigger : HLT) is again composed of fast algorithms, but this time implemented in software
+on large computer farms.  The fact that they are on computer farms means that the algorithms can be more complex but still
+must compromise some performance.  In the case of MET, more advanced algorithms for approximately reconstructing the
+object-level energy flows calculate the imbalance and here, if the imbalance is greater than 110 GeV, we record the event
+to be stored on disk to be fully analyzed offline.  It is precisely these events which will eventually be used to
+perform the search for the monojet signature.</p>
+
+<p>Now, what is interesting is that although the MET imbalance is required to be only 110 GeV, due to the imperfections
+and sacrifices that were necessary when designing the “trigger algorithm”, and because the algorithm that is used to
+eventually calculate the MET observable in the actual analysis may be different (typically more sophisticated) then it
+is not guaranteed that every event that has 120 GeV of MET calculated with the most sophisticated algorithm (“offline MET”)
+will get recorded.  In fact, only a small fraction (~20%) will get recorded.  This is due to the inefficiency of the
+trigger algorithm and means that we can only probe the monojet phase space starting at 250 GeV of MET.  This is crazy!
+And if its not crazy to you, ask someone about it!</p>
+
+<p><img src="./DM Searches _ Mono-X – Hands On DM@LHC_files/2018May_Efficiency_Zmumu.png" alt=""></p>
+
+<h2 id="signal-region-selection">Signal Region Selection</h2>
+
+<p>The concept of a signature was already established previously.  However, the precise criteria and boundaries can only
+be determined in a well-thought-out way by some guiding principle.  This is commonly done using Monte Carlo simulation,
+similar to what you have learned to use previously in MadGraph+Pythia.  However, at the LHC experiments we often also
+take into consideration the effects of the detector by interfacing the output HEPMC file to a detector simulation
+program such as Geant4 to produce the same output as we would have if we take data with an actual detector.</p>
+
+<p>This process of simulation is performed for the signal (as you did before) and also for the expected background processes.
+Once you have both of these, you can confirm your expectation that the DM signal will have a larger level of
+MET than the SM background.  But now you can more precisely answer the question “How much more?” and define a
+threshold by which you define the selected set of events in which you would expect to see a signal in DM exists.</p>
+
+<p>This often constitutes a large portion of the design of a DM search as there are many selection criteria to explore
+and there is no one “best” way to go about determining what selection criteria you “should” use though
+a common and simple quantitative metric that can be used is to compare the number of expected signal events (S)
+to the expected uncertainty on the number of expected background events (root(B)).  If you can apply
+a selection criteria or an event veto and cause this number to increase, you have done something good.</p>
+
+<h2 id="backgrounds-damn-it">Backgrounds (Damn it!)</h2>
+
+<p>Although you may try very hard, more often than not, the region of phase space that you define as your signal region, where
+you expect the relative amount of signal to be as high as possible, will be populated by a considerable
+amount of SM events.  These backgrounds can be of two types and it is important to understand which dominates
+the overall background in your signal region.</p>
+
+<p><strong>Irreducible</strong> : These are events where the final state topology, when translated to an ensemble of physics objects
+is indistinguishable between signal and background.  The underlying particles giving rise to this final state
+may be different (e.g. neutrinos vs. DM particles - see below) but if they show up as the same physics object (in the case
+of neutrinos and DM particles, they both appear as MET) then you will be hard pressed to distinguish
+on an event-by-event basis if you are examining signal or background.</p>
+
+<p><strong>Reducible</strong> : These are events where there is a feature that distinguishes the final state topology when
+examining signal and background but you are just unable to take full advantage of that feature.  As an example,
+the W+jets process where the W boson decays to a “lepton” (e,mu) will conventionally be removed by our
+event veto on the presence of charged leptons.  However, if our detector or the reconstruction algorithm fails to identify
+the lepton coming from the W boson decay then we are blind to this and we will accept this event.  In this case,
+if we only worked harder, perhaps we could reduce this better.</p>
+
+<p>FIG : pictorial representation of Z+jets being equal to DM diagram and Z+jets and W+jets when the lepton is missed</p>
+
+<p>In the case of DM searches, to a large extent one of the most prevalent backgrounds is the <em>irreducible</em> background
+of a Z boson decaying to neutrinos produced in association with jets (quarks/gluons).  Remember, MET is observed as
+nothing more than the quantified momentum imbalance in an event and since neutrinos, like DM particles, pass
+through the detector unseen, both have MET.  So on an event-by-event basis, no matter how hard we work, we cannot tell
+them apart.  It is only when comparing two <strong>ensembles</strong> of events differentially that it is possible to
+distinguish the difference.</p>
+
+<p>FIG : MonoJet MET spectrum highlighted with text</p>
+
+<h2 id="uncertainties">Uncertainties</h2>
+
+<p>The final bit of work that needs to be done in a search, and which by no means is small, is to evaluate
+the uncertainties associated with all the aspects of performing the measurement.  In general, uncertainties
+can be divided into two categories; experimental and theoretical.  However, in each category there are a myriad
+of uncertainties :</p>
+
+<p><strong>Experimental</strong> : These are uncertainties associated with the process of calibrating the response of the detector.
+In general, a calibration comes in one of two forms, either a direct calibration of the observable itself (e.g.
+jet or lepton energy scale) or the calibration of the identification <em>efficiency</em> (e.g. b-tagging efficiency).  The former
+will shift a single event around in phase space and this event can either be counted or fail to be counted as a result
+of this shifting.  The latter, however, is taken into account through a <em>weighting</em> of a given event.</p>
+
+<p><strong>Theoretical</strong> : These are uncertainties that take into account the fact that when we use Monte Carlo to predict
+either the background or the expected signal, there are subjective choices that must be made (e.g. normalization and
+factorization scale).  There is also a subjective approach to the conceptual aspects of the Monte Carlo, for instance in
+the manner in which the parton shower and hadronization process, which is entirely empirical in nature.  Therefore,
+it is important to quantify how the expected event yield in the signal region changes if we change either of these
+underlying assumptions in any aspect of our search that relies on Monte Carlo simulation.  Typically, these
+are taken into account by generating the same Monte Carlo sample under two different assumptions and then comparing
+the final event yield, or the final “MET spectra”.  The difference at this final stage, referred to as a
+<strong>“two point uncertainty”</strong>, is a very common way to quantify the uncertainty and can often be one of the most challenging and
+hand wavy aspects in a search.</p>
+
+<h2 id="the-magic-of-likelihoods">The Magic of Likelihoods</h2>
+
+<p>The final step of our search process is to take the information that we have measured and refined
+in the entire process previously described and connect these observation to meaningful
+parameters in the model of interest, which for us is a BSM model of DM.  This connection is made
+through the use of <strong>inferential statistics</strong> and the use of <strong>likelihoods</strong>, which are
+probability distribution functions that act as tools to distill the information coming
+from our observations into a more manageable/”simpler” form and connect it to the parameters
+in our model.  More often than not, the parameter that we choose to use as the main connection point
+when performing searches is the cross section, as this is very intuitively related to the event yield
+and simplifies the overall procedure.  The use of likelihoods will allow us to investigate
+what values of cross section are absurd (i.e. “excluded”) and which values of the cross section
+could still possibly be valid given the data.  Once this is in hand, further translations can be made
+into the parameter space of the model by mapping out the set of points that are invalid
+in terms of the cross section is produced under a specific assumption of couplings (or other parmeters).
+Once this set of points is found, we can eventually produce an exclusion “contour” (there we go, now
+we get a sense of where we are heading with CONTUR … which is spelled slightly different because
+its an acronym.)</p>
+
+<p>FIG : Workflow</p>
+<ul>
+  <li>Data spectra</li>
+  <li>likelihood equation and distribution</li>
+  <li>connect to allowed point</li>
+  <li>mapping out of excluded region</li>
+</ul>
+
+<p>The next section is an intermezzo in statistics, and conceptual in nature, like this page.  It will
+not be comprehensive, but does summarize “what is done at the LHC”.</p>
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Missing transverse energy is <strong>not</strong> a thing - it is missing transverse momentum because it has a magnitude <strong>and</strong> a direction.</p>
+</li>
+    
+    <li><p>Detector smearing results from the physical limitations of our detectors precision.</p>
+</li>
+    
+    <li><p>Inferential statistics can be used to transform the observations made about an ensemble of events into statements about a physics model through the use of likelihoods.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/03-madgraphpythia/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="https://smeehan12.github.io/2019-08-12-dmatlhc-tutorial/05-stats/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 copyright" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2019
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://software-carpentry.org/">Software Carpentry Foundation</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+	
+	<a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/edit/gh-pages/_episodes/04-searches.md" data-checker-ignore="">Edit on GitHub</a>
+	
+	/
+	<a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/blob/gh-pages/CONTRIBUTING.md" data-checker-ignore="">Contributing</a>
+	/
+	<a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/">Source</a>
+	/
+	<a href="https://github.com/smeehan12/2019-08-12-dmatlhc-tutorial/blob/gh-pages/CITATION" data-checker-ignore="">Cite</a>
+	/
+	<a href="mailto:smeehan12@gmail.com">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script async="" src="./DM Searches _ Mono-X – Hands On DM@LHC_files/analytics.js"></script><script src="./DM Searches _ Mono-X – Hands On DM@LHC_files/jquery.min.js"></script>
+<script src="./DM Searches _ Mono-X – Hands On DM@LHC_files/bootstrap.min.js"></script>
+<script src="./DM Searches _ Mono-X – Hands On DM@LHC_files/lesson.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37305346-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+
+</body></html>
